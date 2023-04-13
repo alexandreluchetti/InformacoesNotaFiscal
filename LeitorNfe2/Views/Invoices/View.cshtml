@@ -1,0 +1,64 @@
+﻿@model LeitorNfe2.Models.UpdateInvoiceViewModel
+
+@{
+}
+
+<h1>Atualizar nota fiscal</h1>
+<p>Você só poderá alterar o campo "Descrição"</p>
+<br />
+
+<form method="post" action="View">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Número da nota</label>
+        <input type="number" class="form-control" asp-for="Number" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Chave de acesso</label>
+        <input type="text" class="form-control" asp-for="AccessKey" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Data de emissão</label>
+        <input type="datetime" class="form-control" asp-for="IssueDate" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">ID do emitente</label>
+        <input type="number" class="form-control" asp-for="IssuerId" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">ID do destinatário</label>
+        <input type="number" class="form-control" asp-for="AddresseeId" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">ID do produto</label>
+        <input type="number" class="form-control" asp-for="ProductId" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Valor total da nota</label>
+        <input type="number" class="form-control" asp-for="TotalValue" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Descrição</label>
+        <input type="text" class="form-control" asp-for="Description">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Número de pedido</label>
+        <input type="text" class="form-control" asp-for="OrderNumber">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Invoices">Deletar</button>
+</form>

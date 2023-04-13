@@ -1,0 +1,31 @@
+﻿@model LeitorNfe2.Models.AddAddresseeViewModel
+
+@{
+}
+
+<h1>Destinatário</h1>
+<br />
+
+<form method="post" action="Add"> 
+    <div class="mb-3">
+        <label for="" class="form-label">Nome</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">CNPJ</label>
+        <input type="number" class="form-control" asp-for="Cnpj">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">ID endereço</label>
+        <input type="number" class="form-control" asp-for="AddressId">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="text" class="form-control" asp-for="Email">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

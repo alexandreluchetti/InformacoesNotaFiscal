@@ -1,0 +1,41 @@
+﻿@model LeitorNfe2.Models.AddAddressViewModel
+
+@{
+}
+
+<h1>Endereços</h1>
+<br />
+
+<form method="post" action="Add"> 
+    <div class="mb-3">
+        <label for="" class="form-label">Logradouro</label>
+        <input type="text" class="form-control" asp-for="PublicPlace">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Número</label>
+        <input type="number" class="form-control" asp-for="Number">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Bairro</label>
+        <input type="text" class="form-control" asp-for="District">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Cidade</label>
+        <input type="text" class="form-control" asp-for="County">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Estado</label>
+        <input type="text" class="form-control" asp-for="State">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">CEP</label>
+        <input type="text" class="form-control" asp-for="ZipCode">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

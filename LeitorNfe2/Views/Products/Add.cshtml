@@ -1,0 +1,36 @@
+﻿@model LeitorNfe2.Models.AddProductViewModel
+
+@{
+}
+
+<h1>Produtos</h1>
+<br />
+
+<form method="post" action="Add"> 
+    <div class="mb-3">
+        <label for="" class="form-label">Código do produto</label>
+        <input type="number" class="form-control" asp-for="ProductCode">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Nome</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Quantidade</label>
+        <input type="number" class="form-control" asp-for="Amount">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Valor unitário</label>
+        <input type="number" class="form-control" asp-for="UnitaryValue">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Valor total</label>
+        <input type="number" class="form-control" asp-for="TotalValue">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

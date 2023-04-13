@@ -1,0 +1,56 @@
+﻿@model LeitorNfe2.Models.AddInvoiceViewModel
+
+@{
+}
+
+<h1>Nota fiscal</h1>
+<br/>
+
+<form method="post" action="Add"> 
+    <div class="mb-3">
+        <label for="" class="form-label">Número da nota</label>
+        <input type="number" class="form-control" asp-for="Number">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Chave de acesso</label>
+        <input type="text" class="form-control" asp-for="AccessKey">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Data de emissão</label>
+        <input type="datetime" class="form-control" asp-for="IssueDate">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">ID do emitente</label>
+        <input type="number" class="form-control" asp-for="IssuerId">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">ID do destinatário</label>
+        <input type="number" class="form-control" asp-for="AddresseeId">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">ID do produto</label>
+        <input type="number" class="form-control" asp-for="ProductId">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Valor total da nota</label>
+        <input type="number" class="form-control" asp-for="TotalValue">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Descrição</label>
+        <input type="text" class="form-control" asp-for="Description">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Número do pedido</label>
+        <input type="text" class="form-control" asp-for="OrderNumber">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

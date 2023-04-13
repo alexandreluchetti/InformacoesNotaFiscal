@@ -1,0 +1,36 @@
+﻿@model List<LeitorNfe2.Models.Domain.Invoice>
+
+@{
+}
+
+<h1>Relatório de notas fiscais</h1>
+<br/>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Número da nota</th>
+            <th>Chave de acesso</th>
+            <th>Data de emissão</th>
+            <th>Valor total</th>
+            <th>Descrição</th>
+            <th>Número de pedido</th>
+            <th> </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var invoice in Model)
+        {
+            <tr>
+                <td>@invoice.Number</td>
+                <td>@invoice.AccessKey</td>
+                <td>@invoice.IssueDate.ToString("dd/MM/yyyy")</td>
+                <td>@invoice.TotalValue</td>
+                <td>@invoice.Description</td>
+                <td>@invoice.OrderNumber</td>
+                <td><a href="Invoices/View/@invoice.Id">Alterar/Deletar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
